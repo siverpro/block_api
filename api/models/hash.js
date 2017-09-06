@@ -1,11 +1,11 @@
-const Hash = sequelize.define('hash', {
-  worker: {
-    type: Sequelize.STRING
-  },
-  algo: {
-    type: Sequelize.STRING
-  },
-  hashrate: {
-    type: Sequelize.STRING
-  }
-});
+'use strict';
+
+module.exports = function(sequelize, DataTypes) {
+  var Hash = sequelize.define('Hash', {
+    worker: { DataTypes.STRING },
+    algo: { DataTypes.STRING },
+    hashrate: { DataTypes.STRING }
+  });
+
+  return Hash;
+};
